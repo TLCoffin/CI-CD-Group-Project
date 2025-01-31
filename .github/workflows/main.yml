@@ -1,0 +1,41 @@
+name: Build-and-Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+
+      - name: Install NPM
+        run: |
+          cd project
+          npm install    
+
+      - name: Run Lint
+        run: |
+          cd project
+          npm run lint
+
+      - name: Reports Test
+        run: |
+          cd project/src/tests
+          npm run report-test
+
+      - name: Storage Test
+        run: |
+          cd projects/src/tests
+          chmod u+x storage.test.js
+          npm run storage-test
