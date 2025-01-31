@@ -7,7 +7,9 @@
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "serve": "serve dist",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "report-test": "node src/tests/reports.test.js",
+    "storage-test": "node src/tests/storage.test.js"
   },
   "keywords": [],
   "author": "",
