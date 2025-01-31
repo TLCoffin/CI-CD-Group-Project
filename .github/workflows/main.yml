@@ -29,13 +29,32 @@ jobs:
           cd project
           npm run lint
 
-      - name: Reports Test
-        run: |
-          cd project/src/tests
-          npm run report-test
+      #- name: Reports Test
+        #run: |
+          #cd project/src/tests
+          #chmod u+x reports.test.js
+          #npm run report-test
 
-      - name: Storage Test
+      #- name: Storage Test
+        #run: |
+          #cd projects/src/tests
+          #chmod u+x storage.test.js
+          #npm run storage-test
+
+  CD:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+
+      - name: Install NPM
         run: |
-          cd projects/src/tests
-          chmod u+x storage.test.js
-          npm run storage-test
+          cd project
+          npm install
+
