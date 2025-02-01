@@ -17,9 +17,9 @@ jobs:
       - name: Move Web Files
         run: |
           cd src
-          mv index.html ../
-          mv styles.css ../
-          mv app.js ../
+          mv index.html CI-CD-Group-Project
+          mv styles.css CI-CD-Group-Project
+          mv app.js CI-CD-Group-Project
         
       - name: Use Node.js
         uses: actions/setup-node@v3
