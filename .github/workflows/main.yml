@@ -20,16 +20,10 @@ jobs:
           node-version: '16.x'
 
       - name: Install NPM
-        run: |
-          cd project
-          npm install    
+        run: npm install    
 
       - name: Run Lint
-        run: |
-          cd project
-          npm run lint
+        run: npm run lint
 
       - name: Run Tests
-        run: |
-          cd project
-          npm test
+        run: npm test
