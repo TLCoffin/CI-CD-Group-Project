@@ -49,4 +49,4 @@ jobs:
         if: github.ref == 'refs/heads/master'
         uses: ad-m/github-push-action@master
         with:
-          github_token: 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
+          github_token: ${{ secrets.GITHUB_TOKEN }}
