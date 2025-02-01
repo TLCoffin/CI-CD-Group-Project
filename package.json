@@ -8,10 +8,7 @@
     "watch": "rollup -c -w",
     "serve": "serve dist",
     "lint": "eslint .",
-    "report-test": "node src/tests/reports.test.js",
-    "storage-test": "node src/tests/storage.test.js",
-    "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
