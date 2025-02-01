@@ -18,7 +18,7 @@ jobs:
         run: |
           cd src
           mv index.html ../
-          mv style.css ../
+          mv styles.css ../
           mv app.js ../
         
       - name: Use Node.js
