@@ -9,7 +9,9 @@
     "serve": "serve dist",
     "lint": "eslint .",
     "report-test": "node src/tests/reports.test.js",
-    "storage-test": "node src/tests/storage.test.js"
+    "storage-test": "node src/tests/storage.test.js",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "keywords": [],
   "author": "",
