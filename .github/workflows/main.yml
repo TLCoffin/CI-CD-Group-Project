@@ -29,15 +29,7 @@ jobs:
           cd project
           npm run lint
 
-      #- name: Reports Test
-        #run: |
-          #cd project/src/tests
-          #chmod u+x reports.test.js
-          #npm run report-test
-
-      #- name: Storage Test
-        #run: |
-          #cd projects/src/tests
-          #chmod u+x storage.test.js
-          #npm run storage-test
-
+      - name: Run Tests
+        run: |
+          cd project
+          npm test
