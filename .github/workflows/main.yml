@@ -27,25 +27,3 @@ jobs:
 
       - name: Run Tests
         run: npm test
-
-  Code-Coverage:
-    steps:
-      - name: Code Coverage Reporting
-        # You may pin to the exact commit or the version.
-        # uses: brobles82/lcov-reporter-action@6d588391c4906c9ee94310d0e860c72ddaf22b35
-        uses: brobles82/lcov-reporter-action@node20.9.3
-        with:
-        # Github token
-        github-token: # default is ${{ github.token }}
-        # The location of the lcov.info file
-        lcov-file: # optional
-        # The location of the lcov file for the base branch
-        lcov-base: # optional
-        # Set to true to only comment with coverage on files changed in this commit
-        filter-changed-files: # optional
-        # Set to true to delete old Coverage Report comments
-        delete-old-comments: # optional
-        # Set working directory if project is not in root folder
-        working-directory: # optional, default is ./
-        # Title to add to the comment
-        title: # optional
